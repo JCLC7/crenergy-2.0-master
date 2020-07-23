@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CR energy</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" id="woocommerce-currency-switcher-css" href="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/woocommerce-currency-switcher/css/front.css?ver=2.3.1" type="text/css" media="all">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a href="http://www.weservices.mx"><img src="~/img/logo.png" style="width: 90px; height: 90px;" alt="logo weservices"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Productos">Productos</a>
+                    </li>
+             
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Contacto">Contacto</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <form class="form-inline">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Carrito">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-page="/Cuenta">Inicio/Registro</a>
+                    </li>
+                </ul>
+            </form>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 text-right">
+                </div>
+                <div class="col-xs-12 col-md-6 text-right">
+                    <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+                    <div class="redes-footer">
+                        <a href="https://www.facebook.com/"><img src="img/face.png"></a>
+                        <a href="https://instagram.com/"><img src="img/instagram.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12 text-center">
+                    <a class="text-muted small" asp-page="/TerminoCondiciones">Aviso de privacidad  - Todos los derechos reservados. Copyrigth - weservices.mx</a>
+
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+        </div>
+    </footer> 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

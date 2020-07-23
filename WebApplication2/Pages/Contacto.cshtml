@@ -1,0 +1,101 @@
+﻿@page
+@model WebApplication2.Pages.ContactoModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<h1>Contacto</h1>
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4"></h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">
+        
+    </p>
+    <form method="post">
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control" asp-for="Contacto.Name">
+                            <label for="name" class="">Nombre</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control" asp-for="Contacto.Email">
+                            <label for="email" class="">Email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control" asp-for="Contacto.Subject">
+                            <label for="subject" class="">Motivo</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="text" name="text" class="form-control" asp-for="Contacto.Texto">
+                            <label for="subject" class="">Texto</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <div class="text-center text-md-left">
+                    <button type="submit" class="btn btn-warning text-center"><strong>Enviar</strong></button>
+                </div>
+                <div class="status"></div>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p></p>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p></p>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p></p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+        </div>
+    </form>
+
+
+
+</section>
+

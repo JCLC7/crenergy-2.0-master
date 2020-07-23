@@ -1,0 +1,122 @@
+﻿@page
+@model WebApplication2.Pages.CuentaModel
+@{ ViewData["Title"] = "Registro"; }
+
+
+<div class="col-sm-12 ">
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6 main-section">
+
+            <div class="modal-content">
+                <div class="col-12 text-center">
+                    <img src="img/logo.png" width="80px" height="80px" alt="">
+                </div>
+
+                <H3 class="text-center">Crea una cuenta</H3>
+                <form method="post" class="col-12">
+                    <div class="form-group text-left">
+                        <label asp-for="cuenta.Nombre">Nombres</label>
+                        <input type="text" class="form-control" name="Nombre" placeholder="Juan" required>
+                        <small id="emailHelp" class="form-text text-muted">Sus datos no seran compartidos con nadie más</small>
+                    </div>
+                    <div class="form-group text-left">
+                        <label asp-for="cuenta.ApellidoPaterno"> Apellido Paterno</label>
+                        <input type="text" class="form-control" name="Apellido Paterno" placeholder="Perez" required>
+                    </div>
+                    <div class="form-group text-left">
+                        <label asp-for="cuenta.ApellidoMaterno">Apellido Materno</label>
+                        <input type="text" class="form-control" name="Apellidos Materno" placeholder="López" required>
+                    </div>
+                    <div class="form-group text-left">
+                        <label asp-for="cuenta.Email"> Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="123@gmail.com">
+                    </div>
+                    <div class="form-group text-left">
+                        <label asp-for="cuenta.Contraseña">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*****">
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label for="exampleInputPassword1">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*****">
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="cuenta.Direccion">Dirección</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="cuenta.Ciudad">Ciudad</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="NY">
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="cuenta.Estado">Estado</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Elige...</option>
+                            <option>Aguascalientes</option>
+                            <option>Baja California</option>
+                            <option>Baja California Sur</option>
+                            <option>Campeche</option>
+                            <option>Ciudad de México</option>
+                            <option>Coahuila</option>
+                            <option>Colima</option>
+                            <option>Chiapas</option>
+                            <option>Chihuahua</option>
+                            <option>Durango</option>
+                            <option>Edo. de Mex</option>
+                            <option>Guanajuato</option>
+                            <option>Guerrero</option>
+                            <option>Hidalgo</option>
+                            <option>Jalisco</option>
+                            <option>Michoacán</option>
+                            <option>Morelos</option>
+                            <option>Nayarit</option>
+                            <option>Nuevo León</option>
+                            <option>Oaxaca</option>
+                            <option>Puebla</option>
+                            <option>Queretaro</option>
+                            <option>Quintana Roo</option>
+                            <option>San Luis Potosí</option>
+                            <option>Sinaloa</option>
+                            <option>Sonora</option>
+                            <option>Tabasco</option>
+                            <option>Tamaulipas</option>
+                            <option>Tlaxcala</option>
+                            <option>Veracruz</option>
+                            <option>Yucatán</option>
+                            <option>Zacatecas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                        <label class="form-check-label" asp-for="cuenta.TerminosCondiciones">Acepto terminos y condiciones</label>
+                    </div>
+
+                    <div class=text-center>
+                        <button type="submit" class="btn btn-warning text-center">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path fill-rule="evenodd" d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z" />
+                                <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z" />
+                            </svg>  Crear
+                        </button>
+                    </div>
+
+                    <div class="form-group text-right">
+                        <a class="form-recovery" href="/Cuenta"> Ya tengo una cuenta</a>
+                    </div>
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
